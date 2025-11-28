@@ -1,0 +1,503 @@
+
+/* Breadcrumb */
+.breadcrumb {
+  margin-top: 136px;
+  padding: 15px 15px;
+  background-color: var(--dark-bg-transparent);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.breadcrumb-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+}
+
+.breadcrumb-content a {
+  color: var(--gray-text);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.breadcrumb-content a:hover {
+  color: var(--primary-color);
+}
+
+.breadcrumb-content span {
+  color: var(--light-text);
+}
+
+.breadcrumb-content i {
+  font-size: 12px;
+  color: var(--gray-text);
+}
+
+/* Movie Detail Section */
+.movie-detail {
+  padding: 40px 0;
+}
+
+.detail-content {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.detail-poster {
+  width: 60%;
+}
+
+.poster-img {
+  width: auto;
+  height: 500px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  position: relative;
+}
+
+.slide-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease;
+}
+
+#slide-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.poster-img:hover #slide-video {
+  opacity: 1;
+}
+
+.poster-actions {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 30%;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  background-color: var(--primary-color);
+  color: var(--light-text);
+}
+
+.heart-btn,
+.share-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--light-text);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.action-btn:hover {
+  color: #ffffff;
+  background-color: var(--hover-color);
+  transform: translateY(-2px);
+}
+
+.favorite-btn:hover,
+.share-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.detail-info {
+  width: 40%;
+}
+
+.movie-title {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.movie-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: var(--gray-text);
+}
+
+.movie-meta .rating {
+  color: #ffc107;
+}
+
+.movie-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.tag {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: var(--light-text);
+}
+
+.movie-description {
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.movie-description p {
+  margin-bottom: 10px;
+}
+
+.movie-details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.detail-item {
+  display: flex;
+}
+
+.detail-label {
+  font-weight: 500;
+  min-width: 120px;
+  color: var(--gray-text);
+}
+
+.detail-value {
+  color: var(--light-text);
+}
+
+/* Episode Section */
+.episode-section {
+  padding: 40px 0;
+  background-color: var(--dark-bg-transparent);
+}
+
+.episode-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.episode-card {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 10px;
+  transition: var(--transition);
+  position: relative;
+  width: 330px;
+}
+
+.episode-card:hover,
+.episode-card.active {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: var(--primary-color);
+}
+
+.episode-number {
+  font-size: 12px;
+  font-weight: 700;
+  margin-right: 10px;
+  color: var(--primary-color);
+}
+
+.episode-title {
+  font-size: 12px;
+  font-weight: 500;
+  margin-right: 15px;
+  flex-grow: 1;
+}
+
+.episode-duration {
+  color: var(--gray-text);
+  margin-right: 15px;
+  font-size: 14px;
+}
+
+.episode-play-btn {
+  background-color: var(--primary-color);
+  border: none;
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.episode-play-btn:hover {
+  background-color: var(--hover-color);
+  transform: scale(1.1);
+}
+
+/* Related Section */
+.related-section {
+  padding: 40px 0;
+}
+
+/* Related Grid */
+.related-grid {
+  position: relative;
+  display: flex;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  height: 100%;
+  gap: 20px;
+}
+
+.related-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.related-card {
+  position: relative;
+  cursor: pointer;
+  transition: var(--transition);
+  z-index: 1;
+  padding: 20px 10px;
+  width: 252px;
+}
+
+.related-content {
+  width: 252px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.related-img {
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 8px;
+}
+
+.related-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.related-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.related-card:hover .related-overlay {
+  opacity: 1;
+}
+
+.related-card:hover .related-img img {
+  transform: scale(1.05);
+}
+
+.play-overlay-btn {
+  background-color: var(--primary-color);
+  border: none;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 20px;
+}
+
+.play-overlay-btn:hover {
+  background-color: var(--hover-color);
+  transform: scale(1.1);
+}
+
+.related-info {
+  padding: 12px 12px;
+}
+
+.related-title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--light-text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  margin-bottom: 8px;
+}
+
+.related-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--gray-text);
+}
+
+.related-meta .rating {
+  color: #ffc107;
+}
+
+/* Mobile Devices (576px - 768px) */
+@media screen and (max-width: 768px) {
+  .detail-content {
+    flex-direction: column;
+  }
+
+  .detail-poster {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .detail-info {
+    width: 100%;
+  }
+
+  .movie-title {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .movie-meta {
+    justify-content: center;
+  }
+
+  .movie-tags {
+    justify-content: center;
+  }
+
+  .episode-section{
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  .episode-card {
+    width: 100%;
+  }
+
+  .related-content {
+    width: 160px;
+  }
+
+  .related-img {
+    height: 200px;
+  }
+
+  .related-title {
+    font-size: 14px;
+  }
+}
+
+/* Small Mobile Devices (320px - 576px) */
+@media screen and (max-width: 576px) {
+  .container-f {
+    padding: 0 20px;
+  }
+
+  .movie-title {
+    font-size: 1.5rem;
+  }
+
+  .movie-meta {
+    font-size: 14px;
+  }
+
+  .action-btn {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  .movie-details {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-item {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .detail-label {
+    min-width: auto;
+  }
+
+  .related-content {
+    width: 140px;
+  }
+
+  .related-img {
+    height: 190px;
+  }
+
+  .related-title {
+    font-size: 12px;
+  }
+}
+
+/* Extra Small Devices (320px and below) */
+@media screen and (max-width: 390px) {
+  .container-f {
+    padding: 0 10px;
+  }
+
+  .related-content {
+    width: 120px;
+  }
+
+  .related-img {
+    height: 160px;
+  }
+}

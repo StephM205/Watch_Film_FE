@@ -1,16 +1,12 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import UserRoutes from './router/user/user.router.jsx'
+import './index.css'
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Routes>
-          <Route path="/" element={<h1>Welcome to Watch Film</h1>} />
-        </Routes>
-      </div>
-    </Router>
+    <div className="App">
+      <UserRoutes />
+    </div>
   )
 }
 
 export default App
-
